@@ -7,8 +7,9 @@ function notFoundHandler(req, res, next) {
 
 // default error handler
 function errorHandler(error, req, res, next) {
-  res.status(500).render(res.locals.error, {
+  res.status(500).render("error", {
     title: "Error page",
+    error,
   });
 }
 
